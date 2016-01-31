@@ -10,14 +10,6 @@ import java.util.Date;
  * @author nate-kingsley
  * Superclass for oauth models
  */
-/**
- * @author natekingsley
- *
- */
-/**
- * @author natekingsley
- *
- */
 public class NinjaOAuthModel implements Serializable {
 
 	/**
@@ -60,7 +52,7 @@ public class NinjaOAuthModel implements Serializable {
 	/**
 	 * The date/time the tokens expire
 	 */
-	private Date exipreTime;
+	private Date expireTime;
 	
 	/**
 	 * 
@@ -88,7 +80,7 @@ public class NinjaOAuthModel implements Serializable {
 		this.accessToken = accessToken;
 		this.refreshToken = refreshToken;
 		this.remoteIp = remoteIp;
-		this.exipreTime = exipreTime;
+		this.expireTime = exipreTime;
 	}
 
 	/**
@@ -176,17 +168,17 @@ public class NinjaOAuthModel implements Serializable {
 	}
 
 	/**
-	 * @return the exipreTime
+	 * @return the expireTime
 	 */
-	public Date getExipreTime() {
-		return exipreTime;
+	public Date getExpireTime() {
+		return expireTime;
 	}
 
 	/**
-	 * @param exipreTime the exipreTime to set
+	 * @param exipreTime the expireTime to set
 	 */
-	public void setExipreTime(Date exipreTime) {
-		this.exipreTime = exipreTime;
+	public void setExpireTime(Date expireTime) {
+		this.expireTime = expireTime;
 	}
 
 	/**
@@ -212,7 +204,7 @@ public class NinjaOAuthModel implements Serializable {
 				+ (refreshToken != null ? "refreshToken=" + refreshToken + ", "
 						: "")
 				+ (remoteIp != null ? "remoteIp=" + remoteIp + ", " : "")
-				+ (exipreTime != null ? "exipreTime=" + exipreTime : "") + "]";
+				+ (expireTime != null ? "expireTime=" + expireTime : "") + "]";
 	}
 	
 	

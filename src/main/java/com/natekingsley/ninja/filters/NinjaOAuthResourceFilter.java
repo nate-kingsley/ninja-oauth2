@@ -48,7 +48,7 @@ public class NinjaOAuthResourceFilter implements Filter {
 				
 				NinjaOAuthModel noam = datastore.findByAccessToken(token);
 				
-				if(noam != null && noam.getExipreTime().after(new Date()) && context.getRemoteAddr().equals(noam.getRemoteIp())){
+				if(noam != null && noam.getExpireTime().after(new Date()) && context.getRemoteAddr().equals(noam.getRemoteIp())){
 					return chain.next(context);
 				} else {
 					throw OAuthProblemException.error("invalid_request", "Invalid token or request from bad ip");

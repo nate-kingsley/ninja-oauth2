@@ -117,7 +117,7 @@ public class NinjaOAuthResourceFilterTest extends NinjaTest {
 		assertNotNull("Test for valid oauth model", noam);
 		
 		//testing for exiration time
-		assertTrue("Testing for valid expiration date", noam.getExipreTime().getTime() > new Date().getTime());
+		assertTrue("Testing for valid expiration date", noam.getExpireTime().getTime() > new Date().getTime());
 		
 		//testing for remote ip
 		assertEquals("Testing for correct ip", "127.0.0.1", noam.getRemoteIp());
